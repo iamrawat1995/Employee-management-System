@@ -1,7 +1,9 @@
-package com.starter.repository;
+package com.starter.selenium;
 
+
+
+import static org.junit.Assert.*;
 import java.util.concurrent.TimeUnit;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -30,15 +32,15 @@ public class EmployeeWeb {
 		driver.get("http://localhost:8081/");
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//*[@id=\"sticky-wrapper\"]/header/div/div/div[2]/nav/ul/li[4]/a")).click();
-		driver.findElement(By.xpath("//*[@id=\"fname_id\"]")).sendKeys("Asiya9");
-		driver.findElement(By.xpath("//*[@id=\"lname_id\"]")).sendKeys("Mulla");
+		driver.findElement(By.xpath("//*[@id=\"fname_id\"]")).sendKeys("Dinesh");
+		driver.findElement(By.xpath("//*[@id=\"lname_id\"]")).sendKeys("Rathi");
 		driver.findElement(By.xpath("//*[@id=\"dob_id\"]")).sendKeys("25/07/1997");
-		driver.findElement(By.xpath("//*[@id=\"gender_id\"]")).sendKeys("Female");
-		driver.findElement(By.xpath("//*[@id=\"eid_id\"]")).sendKeys("10");
+		driver.findElement(By.xpath("//*[@id=\"gender_id\"]")).sendKeys("Male");
+		driver.findElement(By.xpath("//*[@id=\"eid_id\"]")).sendKeys("10101");
 		driver.findElement(By.xpath("//*[@id=\"unit_id\"]")).sendKeys("Business");
 		driver.findElement(By.xpath("//*[@id=\"branch_id\"]")).sendKeys("HR");
-		driver.findElement(By.xpath("//*[@id=\"email_id\"]")).sendKeys("asi25@gmail.com");
-		driver.findElement(By.xpath("//*[@id=\"desg_id\"]")).sendKeys("MFS");
+		driver.findElement(By.xpath("//*[@id=\"email_id\"]")).sendKeys("dinesh25@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"desg_id\"]")).sendKeys("Manager");
 		driver.findElement(By.xpath("//*[@id=\"contact_id\"]")).sendKeys("5000124697");
 		//driver.findElement(By.xpath("//*[@id=\"pic_id\"]")).click();
 		
@@ -53,7 +55,7 @@ public class EmployeeWeb {
 		 String str = driver.findElement(By.xpath("//*[@id=\"card_pad\"]/form/div/div[1]/label[1]")).getText();
 		 if(str.equals("Search by Employee ID:"))
 			 System.out.println("Success");
-		//String url= driver.getCurrentUrl();
+		String url= driver.getCurrentUrl();
 		//assertEquals("fail- unable to register", url, "https://accounts.lambdatest.com/user/email-verification");
 	
 		}
