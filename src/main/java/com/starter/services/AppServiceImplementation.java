@@ -61,7 +61,7 @@ public class AppServiceImplementation implements AppServices {
 		//File rootDir = new File("D:\\desktop\\training\\project\\final1.0\\spring-boot-app");
 		
 		//String folder="C:\\spring-boot-final-new\\spring-boot-final-new\\src\\main\\resources\\static\\images";
-		String folder="D:\\spring-boot-final-new1111\\spring-boot-final-new\\spring-boot-final-new\\src\\main\\resources\\static\\images\\";
+		String folder="Z:\\Project\\New folder\\Employee-management-System\\src\\main\\resources\\static\\images\\";
 		byte[] bytes=imagefile.getBytes();
 		Path path = Paths.get(folder+imagefile.getOriginalFilename());
 		System.out.println(path);
